@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LongLayOver</title>
+  <link rel="stylesheet" href="./output.css">
+  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet">
+ 
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./custom.css">
+</head>
+<body onload="digi()" style="background-image: url(./assets/happening.png);font-family: poppins;" class=" w-full h-full bg-cover bg-center" x-data='{onDiscover: false, scrollPosition: window.pageYOffset}'
+  @scroll.window='scrollPosition = window.pageYOffset'>
+  <!-- <div class="w-full h-full  top-0 bottom-0 left-0 right-0  absolute z-[-1]  ae" style="background: linear-gradient(231.08deg, rgba(255, 165, 126, 0.232) -26.81%, rgba(241, 239, 240, 0.94) 72.34%);
+  background-blend-mode: multiply;
+  "></div> -->
+  <nav class="w-full  flex-col pb-[-100px] lg:pb-[20px] sticky items-center pt-[1rem] flex  bg-transparent nav-bg z-[999] top-0">
+    <div class="w-full px-10 lg:px-0 lg:w-9/12 xl:w-8/12 xl:pb-5 none ">
+      <div class=" flex justify-end md:gap-0 gap-8 md:justify-between">
+        <div class="none  items-center hidden md:flex">
+          <i class="fa-regular  text-xl xl:text-3xl text-[#FFA47E] fa-clock"></i>
+          <!-- <i class="fa-solid text-xl xl:text-3xl text-[#CB5E99] fa-clock"></i> -->
+          <div id="tt" class="text-sm 2xl:text-base ml-2 xl:ml-4 text-gray-500"></div>
+          <!-- <div class="text-[gray] ml-2">pm</div> -->
+        </div>
+        <div class="none items-center hidden md:flex">
+          <img class="w-5 xl:w-7 none" src="./assets/happening_calender.svg" alt="">
+          <div class="day  text-sm 2xl:text-base  ml-2 text-gray-500"></div>
+          <div class="date"></div>
+          <div class="month"></div>
+          <div class="year"></div>
+        </div>
+        <div class="none gap-2 items-center hidden md:flex">
+          <i class="fa-regular fa-clouds text-xl xl:text-3xl text-[#FFA47E]"></i>
+          <div class="text-gray-500 text-sm 2xl:text-base">28C Johar Town Lahore</div>
+        </div>
+        <div class="justify-start pl-2 items-center text-[#FFA47E] font-medium hidden lg:flex">
+           <i class="text-xl xl:text-3xl fa-regular fa-globe mr-2"></i>
+          <select id="underline_select" class="block z-[99999] py-2.5 px-0 w-16 text-sm 2xl:text-base font-medium text-gray-500 bg-transparent border-0 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+            <option value="English" selected ="">EN</option>
+            <option value="Čeština">Čeština</option>
+          </select>
+          <i class="fa-regular fa-angle-down"></i>
+        </div>
+        <div class=" w-fit gap-2 items-center flex">
+          <a href="./login.html"
+            class=" text-[#FFA47E] z-[101] bg-[#F9F9F9] items-center text-sm 2xl:text-base flex gap-2 py-2 px-5 rounded-full  font-medium">
+            Login Signup
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+      <div class="flex relative justify-center items-center">
+        <input type="text"
+          class="border mt-6 xl:mt-10 w-8/12 z-[19] focus:ring-[#F47B89] focus:none-[#F47B89] focus:none  h-11 pl-8 px-4 placeholder:text-xs text-xs rounded-full"
+        placeholder="Search with  IATA code or locations" name="" id="">
+        <button
+          class="absolute text-[#FFA47E] p-3 right-[18%] xl:right-[19%] xl:top-[46%] 2xl:right-[19%] 2xl:top-[46%] top-[34%] "><i
+            class="fa-regular text-sm fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+
+    <div class="flex z-[1] mt-[-50px] lg:mt-[-100px] xl:mt-[-160px] w-full justify-between">
+      <div class="w-2/12 lg:w-1/12 xl:w-2/12 flex justify-center items-center none">
+        <img class="w-24" src="./assets/logo 4.png" alt="">
+      </div>
+
+      <div class=" w-3/12   lg:w-1/12 xl:w-2/12 flex justify-center items-center ">
+        <button class="nav-2-open  p-4  flex justify-center items-center  ">
+          <i class="fa-sharp   text-[#FFA47E] text-2xl md:text-3xl xl:text-4xl fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <nav
+  class=" h-screen nav-2 z-[999] overflow-auto fixed right-0 top-0 w-[320px] xl:w-[400px] 2xl:w-[450px] bg-[#151F38]">
+  <div class="flex relative mt-[4rem]  justify-end"><button class="nav-2-btn"><i
+        class="fa-solid mr-4 text-5xl  text-[#CB5E99] fa-circle-xmark"></i></button></div>
+  <div class="pl-10 ">
+ <a href="./index.html">
+  <h3 class="text-3xl xl:text-4xl 2xl:text-5xl hover:text-[#CB5E99] mt-[2rem] xl:mt-[3rem] none-all font-thin text-white">Home</h3></a>
+ <a href="./about-us.html">
+  <h3 class="text-3xl xl:text-4xl 2xl:text-5xl hover:text-[#CB5E99] mt-[2rem] xl:mt-[3rem] none-all font-thin text-white">About us</h3></a> 
+  <h3 class="text-3xl xl:text-4xl 2xl:text-5xl hover:text-[#CB5E99] mt-[2rem] xl:mt-[3rem] none-all font-thin text-white">Services</h3>
+  <h3 class="text-3xl xl:text-4xl 2xl:text-5xl hover:text-[#CB5E99] mt-[2rem] xl:mt-[3rem] none-all font-thin text-white">Blog</h3>
+  <h3 class="text-3xl xl:text-4xl 2xl:text-5xl hover:text-[#CB5E99] mt-[2rem] xl:mt-[3rem] none-all font-thin text-white">Contact</h3>
+    <div class="flex pb-10 flex-col">
+      <button class="bg-white w-fit hover:text-white hover:bg-[#CB5E99] none-all text-[#CB5E99] px-2 xl:px-4 py-2 xl:py-3 text-base 2xl:text-2xl mt-[2rem] xl:mt-[4rem]">Become a vendor</button>
+      <button class="bg-[#CB5E99] hover:bg-white w-fit hover:text-[#CB5E99] text-[white] px-4 xl:px-6 py-2 xl:py-3 text-base xl:ext-lg 2xl:text-2xl mt-[2rem] xl:mt-[4rem]">Become a seller</button>
+    </div>
+  </div>
+</nav>
+<!-- <p class="mt-[300rem]">w</p> -->
+<section>
+  <div class="container overflow-x-hidden h-full bg-transparent 2xl:max-w-screen-2xl mx-auto mt-[150px] px-4 ">
+    <div class="flex  py-[20px]">
+      <div class="overflow-hidden w-full">
+        <h6  style="font-family: 'Water Brush', cursive;" class="text-[#FFA47E] text-6xl uppercase font-[]">Events</h6>
+        <h6 class="text-6xl  font-semibold mt-[-40px] uppercase pb-5">Happening</h6>
+      </div> 
+
+    </div>
+  </div>
+</section>
+<section class="">
+  <div class="container  relative  h-full bg-transparent 2xl:max-w-screen-2xl mx-auto px-4 ">
+
+    <div  class="swiper  px-10 py-4 happen-mySwiper">
+      <div class="swiper-wrapper pt-[50px]">
+        <div class="swiper-slide before:bg-[#FFA47E] swiper-slide-1">
+          <div class="relative">
+           <img src="./assets/todo-near-me.png" class=" w-full rounded-full" alt="">
+           <div class="bg-white top-3 rounded-md right-0  p-4 gap-2 absolute flex flex-col rounded-b-lg">
+             <h3>The historical city of vegan</h3>
+             <div class="flex gap-3 items-center">
+               <div class="flex gap-1  items-center"><i class="fa-solid fa-star text-[#FFCE31]"></i>
+                 <p class="text-xs lg:text-sm text-[#FFCE31]">4.8 Rating</p><p class="text-sm text-[black]">(455)</p></div>
+                 <div class=" text-xs lg:text-sm">2K+ Booked</div>
+             </div>
+             <h4 class="text-sm text-[#FFA47E] w-fit px-2 py- bg-[#b5b5c33a]">Category</h4>
+       
+           </div>
+           <div class="flex flex-col px-3 py-2 rounded-md bg-white absolute bottom-0 left-0  justify-between">
+             <div class="flex  gap-2">
+               <p class="text-[#FFA47E] text-xs lg:text-sm">From:</p>
+               <p class="text-[black] text-xs lg:text-sm">USA</p>
+ 
+             </div>
+             <div class="flex gap-2">
+               <p class="text-[#FFA47E] text-xs lg:text-sm">Radius:</p>
+               <p class="text-[black] text-xs lg:text-sm">1.5km</p>
+ 
+             </div>
+           </div>
+         </div>
+         </div>
+        <div class="swiper-slide before:bg-[#FFA47E] swiper-slide-2  lg:mt-[-50px]">
+          <div class="relative">
+           <img src="./assets/todo-near-me.png" class=" w-full rounded-full" alt="">
+           <div class="bg-white top-3 rounded-md right-0  p-4 gap-2 absolute flex flex-col rounded-b-lg">
+             <h3>The historical city of vegan</h3>
+             <div class="flex gap-3 items-center">
+               <div class="flex gap-1  items-center"><i class="fa-solid fa-star text-[#FFCE31]"></i>
+                 <p class="text-sm text-[#FFCE31]">4.8 Rating</p></div>
+                 <div class="text-[#B5B5C3] text-sm">2K+ Booked</div>
+             </div>
+             <h4 class="text-sm text-[#FFA47E] w-fit px-2 py- bg-[#b5b5c33a]">Category</h4>
+       
+           </div>
+           <div class="flex flex-col px-3 py-2 rounded-md bg-white absolute bottom-0 left-0  justify-between">
+             <div class="flex  gap-2">
+               <p class="text-[#B5B5C3] text-sm">From:</p>
+               <p class="text-[black] text-sm">USA</p>
+ 
+             </div>
+             <div class="flex gap-2">
+               <p class="text-[#B5B5C3] text-sm">Radius:</p>
+               <p class="text-[black] text-sm">1.5km</p>
+ 
+             </div>
+           </div>
+         </div>
+         </div>
+         <div class="swiper-slide before:bg-[#FFA47E] swiper-slide-1">
+          <div class="relative">
+           <img src="./assets/todo-near-me.png" class=" w-full rounded-full" alt="">
+           <div class="bg-white top-3 rounded-md right-0  p-4 gap-2 absolute flex flex-col rounded-b-lg">
+             <h3>The historical city of vegan</h3>
+             <div class="flex gap-3 items-center">
+               <div class="flex gap-1  items-center"><i class="fa-solid fa-star text-[#FFCE31]"></i>
+                 <p class="text-sm text-[#FFCE31]">4.8 Rating</p></div>
+                 <div class="text-[#B5B5C3] text-sm">2K+ Booked</div>
+             </div>
+             <h4 class="text-sm text-[#CB5E99] w-fit px-2 py- bg-[#b5b5c33a]">Category</h4>
+       
+           </div>
+           <div class="flex flex-col px-3 py-2 rounded-md bg-white absolute bottom-0 left-0  justify-between">
+             <div class="flex  gap-2">
+               <p class="text-[#B5B5C3] text-sm">From:</p>
+               <p class="text-[black] text-sm">USA</p>
+ 
+             </div>
+             <div class="flex gap-2">
+               <p class="text-[#B5B5C3] text-sm">Radius:</p>
+               <p class="text-[black] text-sm">1.5km</p>
+ 
+             </div>
+           </div>
+         </div>
+         </div>
+         <div class="swiper-slide before:bg-[#FFA47E] swiper-slide-1">
+          <div class="relative">
+           <img src="./assets/todo-near-me.png" class=" w-full rounded-full" alt="">
+           <div class="bg-white top-3 rounded-md right-0  p-4 gap-2 absolute flex flex-col rounded-b-lg">
+             <h3>The historical city of vegan</h3>
+             <div class="flex gap-3 items-center">
+               <div class="flex gap-1  items-center"><i class="fa-solid fa-star text-[#FFCE31]"></i>
+                 <p class="text-sm text-[#FFCE31]">4.8 Rating</p></div>
+                 <div class="text-[#B5B5C3] text-sm">2K+ Booked</div>
+             </div>
+             <h4 class="text-sm text-[#CB5E99] w-fit px-2 py- bg-[#b5b5c33a]">Category</h4>
+       
+           </div>
+           <div class="flex flex-col px-3 py-2 rounded-md bg-white absolute bottom-0 left-0  justify-between">
+             <div class="flex  gap-2">
+               <p class="text-[#B5B5C3] text-sm">From:</p>
+               <p class="text-[black] text-sm">USA</p>
+ 
+             </div>
+             <div class="flex gap-2">
+               <p class="text-[#B5B5C3] text-sm">Radius:</p>
+               <p class="text-[black] text-sm">1.5km</p>
+ 
+             </div>
+           </div>
+         </div>
+         </div>
+      </div>
+  </div>
+  
+</section>
+<div class="flex mt-10 justify-center">
+  <div class="happen-swiper-button-prev-1 left-0 text-[#FFA47E] text-3xl rounded-full px-2.5 top-[50%] translate-y-[-50%] font-[1px] bg-[transparent] z-[99] "><i class="fa-regular fa-angle-left"></i></div>
+  <div class="happen-swiper-button-next-1 right-0  text-[#FFA47E]  text-3xl rounded-full px-2.5 top-[50%] translate-y-[-50%] font-[1px] bg-[transparent z-[99] "><i class="fa-regular fa-angle-right"></i></div>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../src/js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./src/main.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+
+</html>

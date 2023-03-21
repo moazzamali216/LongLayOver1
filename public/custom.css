@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+body{
+    font-family: poppins !important;
+    font-style: normal !important;
+}
+
+@media screen and (max-width:1024px) {
+    #box-1 {
+        background: linear-gradient(90deg, #004CA3 0%, #004CA3 46.03%, rgba(0, 76, 163, 0) 100%);
+
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #box-1 {
+        background: linear-gradient(180deg, #004CA3 0%, #004CA3 46.03%, rgba(0, 76, 163, 0) 100%);
+
+    }
+}
+
+@media screen and (max-width:1024px) {
+    #box-2 {
+        background: linear-gradient(90deg, #8A51A5 0%, #8A51A5 46.03%, rgba(0, 76, 163, 0) 100%);
+
+
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #box-2 {
+        background: linear-gradient(180deg, #8A51A5 0%, #8A51A5 46.03%, rgba(0, 76, 163, 0) 100%);
+
+
+    }
+}
+
+@media screen and (max-width:1024px) {
+    #box-3 {
+        /* background: linear-gradient(90deg, #8A51A5 0%, #8A51A5 46.03%, rgba(0, 76, 163, 0) 100%); */
+
+        background: linear-gradient(90deg, #CB5E99 0%, #CB5E99 46.03%, rgba(0, 76, 163, 0) 100%);
+
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #box-3 {
+        /* background: linear-gradient(180deg, #8A51A5 0%, #8A51A5 46.03%, rgba(0, 76, 163, 0) 100%); */
+        background: linear-gradient(180deg, #CB5E99 0%, #CB5E99 46.03%, rgba(0, 76, 163, 0) 100%);
+
+
+    }
+}
+
+@media screen and (max-width:1024px) {
+    #box-4 {
+        /* background: linear-gradient(90deg, #8A51A5 0%, #8A51A5 46.03%, rgba(0, 76, 163, 0) 100%); */
+
+        background: linear-gradient(90deg, #F47B89 0%, #F47B89 43.34%, rgba(244, 123, 137, 0) 100%);
+
+
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #box-4 {
+        /* background: linear-gradient(180deg, #8A51A5 0%, #8A51A5 46.03%, rgba(0, 76, 163, 0) 100%); */
+        background: linear-gradient(180deg, #F47B89 0%, #F47B89 43.34%, rgba(244, 123, 137, 0) 100%);
+
+
+    }
+}
+
+@media screen and (max-width:1024px) {
+    #box-5 {
+        /* background: linear-gradient(90deg, #8A51A5 0%, #8A51A5 46.03%, rgba(0, 76, 163, 0) 100%); */
+
+        background: linear-gradient(90deg, #FFA47E 0%, #FFA47E 46.03%, rgba(255, 164, 126, 0) 100%);
+
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #box-5 {
+        background: linear-gradient(180deg, #FFA47E 0%, #FFA47E 46.03%, rgba(255, 164, 126, 0) 100%);
+
+
+    }
+}
+
+@media screen and (max-width:1024px) {
+    #box-6 {
+        /* background: linear-gradient(90deg, #8A51A5 0%, #8A51A5 46.03%, rgba(0, 76, 163, 0) 100%); */
+
+        background: linear-gradient(90deg, #FFC86B 0%, #FFD286 46.03%, rgba(255, 210, 134, 0) 100%);
+
+
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #box-6 {
+        background: linear-gradient(180deg, #FFC86B 0%, #FFD286 46.03%, rgba(255, 210, 134, 0) 100%);
+
+
+
+    }
+}
+
+#box-1,
+#box-2,
+#box-3,
+#box-4,
+#box-5,
+#box-6 {
+    cursor: pointer;
+
+}
+
+.main-grid::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    .grid-1 {
+        animation-name: grids;
+        animation-duration: 2s;
+        /* none: all ease; */
+        /* bottom: -100%; */
+        animation-iteration-count: 1;
+    }
+
+    .grid-1 {
+        animation-name: grids;
+        animation-duration: 2s;
+        /* none: all ease; */
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+    }
+
+    .grid-2 {
+        animation-name: grids;
+        animation-duration: 3s;
+        /* none: all ease; */
+        /* animation-delay: ; */
+        animation-iteration-count: 1;
+    }
+
+    .grid-3 {
+        animation-name: grids;
+        animation-duration: 4s;
+        /* none: all ease; */
+
+        animation-iteration-count: 1;
+    }
+
+    .grid-4 {
+        animation-name: grids;
+        animation-duration: 5s;
+        /* none: all ease; */
+
+        animation-iteration-count: 1;
+    }
+
+    .grid-5 {
+        animation-name: grids;
+        animation-duration: 6s;
+        /* none: all ease; */
+
+        animation-iteration-count: 1;
+    }
+
+    .grid-6 {
+        animation-name: grids;
+        animation-duration: 7s;
+
+        /* none: all ease; */
+
+        animation-iteration-count: 1;
+    }
+
+    @keyframes grids {
+        0% {
+            top: 100%;
+            /* position: absolute; */
+        }
+
+        100% {
+            top: 0%;
+
+        }
+    }
+}
+
+.grid-1 {
+    overflow: hidden;
+    top: 0;
+    animation-name: grids;
+    animation-duration: 2s;
+    /* none: all ease; */
+    /* bottom: -100%; */
+    animation-iteration-count: 1;
+}
+
+.grid-1 {
+    animation-name: grids;
+    animation-duration: 2s;
+    /* none: all ease; */
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+
+.grid-2 {
+    overflow: hidden;
+    top: 0;
+
+    animation-name: grids;
+    animation-duration: 3s;
+    /* none: all ease; */
+    /* animation-delay: ; */
+    animation-iteration-count: 1;
+}
+
+.grid-3 {
+    animation-name: grids;
+    animation-duration: 4s;
+    /* none: all ease; */
+    overflow: hidden;
+    top: 0;
+
+    animation-iteration-count: 1;
+}
+
+.grid-4 {
+    animation-name: grids;
+    animation-duration: 5s;
+    /* none: all ease; */
+    overflow: hidden;
+    top: 0;
+
+    animation-iteration-count: 1;
+}
+
+.grid-5 {
+    animation-name: grids;
+    animation-duration: 6s;
+    /* none: all ease; */
+    overflow: hidden;
+    top: 0;
+
+    animation-iteration-count: 1;
+}
+
+.grid-6 {
+    top: 0;
+
+    overflow: hidden;
+
+    animation-name: grids;
+    animation-duration: 7s;
+    overflow: hidden;
+    /* none: all ease; */
+
+    animation-iteration-count: 1;
+}
+
+@media screen and (max-width:1023px) {
+    @keyframes grids {
+        0% {
+            left: -100%;
+            /* position: absolute; */
+        }
+
+        100% {
+            left: 0%;
+
+        }
+    }
+
+}
+
+.my-about {
+    animation-name: about-us;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-direction: normal;
+    animation-timing-function: steps(10);
+    overflow: hidden;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    border-right: 10px solid black;
+}
+
+@keyframes about-us {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    @keyframes about-us {
+        from {
+            width: 0px;
+        }
+
+        to {
+            width: 250px;
+        }
+    }
+}
+
+.globe {
+    animation-name: globe;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes globe {
+    to {
+        rotate: 360deg;
+    }
+}
+
+.nav-2 {
+    transform: translateX(100%);
+}
+
+.nav2 .nav-2 {
+    transform: translateX(0%);
+}
+
+.nav-2 {
+    transition: all cubic-bezier(.60, .100, .100, .100) 1s;
+}
+
+html {
+    /* overflow-x: hidden; */
+    width: 100%;
+    /* height: auto; */
+    /* background: linear-gradient(232.1deg, rgba(0, 76, 163, 0.69) 0.41%, rgba(0, 76, 163, 0) 71.88%); */
+    /* background: linear-gradient(232.1deg, rgba(0, 76, 163, 0.69) 0.41%, rgba(0, 76, 163, 0) 71.88%); */
+
+}
+
+.nav-bg {
+    background-color: transparent;
+    transition: all ease 0.3s;
+    z-index: 999;
+}
+
+.bg-white-nav .nav-bg {
+    box-shadow: -5px 8px 14px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -5px 8px 14px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -5px 8px 14px -10px rgba(0, 0, 0, 0.75);
+   background: white;
+}
+
+.form__button {
+    border: 2px solid #78993a;
+    display: block;
+    padding: 7px 25px;
+    background-color: #86ac41;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border 0.25s ease-in-out;
+}
+
+.form__button:hover {
+    color: #86ac41;
+    background-color: transparent;
+    border: transparent;
+}
+
+.form__input-group {
+    /* margin: 15px 0; */
+    width: 100%;
+    /* outline: none; */
+    position: relative;
+    display: flex;
+}
+
+.form__input {
+    width: 100%;
+    background: rgba(247, 247, 247, 0.533);
+    padding: 15px;
+    /* w-full border-0 rounded-lg px-2 py-5 font-light */
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-weight: 400;
+    border: none;
+    outline: 1px solid transparent;
+    /* outline: #4091B2; */
+    border-radius: 5px;
+    transition: border 0.25s ease-in-out;
+}
+
+
+.form__input-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    background-color: transparent;
+    font-weight: 300;
+    transform: translateY(-50%);
+    transition: all 0.25s ease-in-out;
+}
+
+.form__input:focus {
+    border: 1px solid #4091B2;
+    outline: 1px solid transparent;
+
+    outline-offset: transparent;
+}
+
+.form__input:focus~.form__input-label {
+    top: -10px;
+    /* background-color: white; */
+    font-size: 14px;
+    color: #4091B2;
+    padding: 0 10px;
+}
+
+@keyframes bubbles2 {
+    from {
+        margin-left: 0px;
+        padding-right: 10px;
+        margin-bottom: -10px;
+    }
+
+    to {
+        margin-left: -10px;
+    }
+}
+
+@keyframes bubble {
+    from {
+        margin-left: -20px;
+        padding-right: 10px;
+        margin-bottom: -10px;
+    }
+
+    to {
+        margin-left: 0px;
+    }
+}
+
+@keyframes bubble {
+    from {
+        margin-left: -20px;
+        padding-right: 10px;
+        margin-bottom: -10px;
+    }
+
+    to {
+        margin-left: 0px;
+    }
+}
+
+@keyframes bubbles {
+    from {
+        margin-left: 0px;
+        padding-right: 10px;
+        margin-bottom: -10px;
+    }
+
+    to {
+        margin-left: -10px;
+    }
+}
+
+.swiper-slide-1::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    margin: -10px;
+    border-radius: 9999px;
+    /* padding: 10px; */
+    /* background: #CB5E99; */
+    overflow: visible !important;
+
+    /* border: 1px solid red ; */
+    animation-name: bubbles;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes bubbles {
+    from {
+        margin-left: 0px;
+        padding-right: 10px;
+        margin-bottom: -10px;
+    }
+
+    to {
+        margin-left: -10px;
+    }
+}
+.swiper-slide-1,
+.swiper-slide-2,
+.swiper-slide-3 {
+    position: relative;
+    padding: 10px;
+    overflow: visible !important;
+}
+
+.swiper-slide-2::before,
+.swiper-slide-3::before {
+    position: absolute;
+    content: "";
+    overflow: visible !important;
+    width: 100%;
+    height: 100%;
+    margin: -10px;
+    border-radius: 9999px;
+    /* padding: 10px; */
+    /* background: #CB5E99; */
+    animation-name: bubble;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+
+.swiper-slide-3 {
+    position: relative;
+    padding: 10px;
+    max-width: 300px;
+    overflow: visible !important;
+    /* border: 1px solid red ; */
+
+}
+
+.swiper-slide-3::before {
+    position: absolute;
+    content: "";
+    width: 66.666666%;
+    height: 100%;
+    margin: -10px;
+    border-radius: 9999px;
+    /* padding: 10px; */
+    /* background: #FFCE31; */
+    overflow: visible !important;
+
+    /* border: 1px solid red ; */
+    animation-name: bubbles2;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes bubbles2 {
+    from {
+        margin-left: 0px;
+        padding-right: 10px;
+        margin-bottom: -10px;
+    }
+
+    to {
+        margin-left: -10px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .swiper-slide-3 {
+        position: relative;
+        padding: 10px;
+        max-width: 100%;
+        overflow: visible !important;
+        /* border: 1px solid red ; */
+
+    }
+
+    .swiper-slide-3::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        margin: -10px;
+        border-radius: 9999px;
+        /* padding: 10px; */
+        /* background: #FFCE31; */
+        overflow: visible !important;
+
+        /* border: 1px solid red ; */
+        animation-name: bubbles2;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes bubbles2 {
+        from {
+            margin-left: 0px;
+            padding-right: 10px;
+            margin-bottom: -10px;
+        }
+
+        to {
+            margin-left: -10px;
+        }
+    }
+}
+.grids-sec{
+    font-family: raleway;
+}

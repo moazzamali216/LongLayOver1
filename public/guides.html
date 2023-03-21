@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LongLayOver</title>
+  <link rel="stylesheet" href="./output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet">
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./custom.css">
+</head>
+
+<body onload="digi()" style="background-image: url(./assets/gudies_bg.png);font-family:poppins" class="w-full h-full bg-no-repeat bg-cover bg-center"
+  x-data='{onDiscover: false, scrollPosition: window.pageYOffset}' @scroll.window='scrollPosition = window.pageYOffset'>
+  <!-- <div class="w-full h-full  top-0 bottom-0 left-0 right-0  absolute z-[-1]  ae" style="background: linear-gradient(231.08deg, rgba(255, 165, 126, 0.232) -26.81%, rgba(241, 239, 240, 0.94) 72.34%);
+  background-blend-mode: multiply;
+  "></div> -->
+  <nav class="w-full  flex-col pb-[-100px] lg:pb-[20px] sticky items-center pt-[1rem] flex  nav-bg bg-transparent z-[999] top-0">
+    <div class="w-full px-10 lg:px-0 lg:w-9/12 xl:w-8/12 xl:pb-5 none ">
+      <div class=" flex justify-end md:gap-0 gap-8 md:justify-between">
+        <div class="none  items-center hidden md:flex">
+          <i class="fa-regular  text-xl xl:text-3xl text-[#FFCE31] fa-clock"></i>
+          <!-- <i class="fa-solid text-xl xl:text-3xl text-[#CB5E99] fa-clock"></i> -->
+          <div id="tt" class="text-sm 2xl:text-base ml-2 xl:ml-4 text-gray-500"></div>
+          <!-- <div class="text-[gray] ml-2">pm</div> -->
+        </div>
+        <div class="none items-center hidden md:flex">
+          <img class="w-5 xl:w-7 none" src="./assets/guides.svg" alt="">
+          <div class="day  text-sm 2xl:text-base  ml-2 text-gray-500"></div>
+          <div class="date"></div>
+          <div class="month"></div>
+          <div class="year"></div>
+        </div>
+        <div class="none gap-2 items-center hidden md:flex">
+          <i class="fa-regular fa-clouds text-xl xl:text-3xl text-[#FFCE31]"></i>
+          <div class="text-gray-500 text-sm 2xl:text-base">28C Johar Town Lahore</div>
+        </div>
+        <div class="justify-start pl-2 items-center text-[#FFCE31] font-medium hidden lg:flex">
+           <i class="text-xl xl:text-3xl fa-regular fa-globe mr-2"></i>
+          <select id="underline_select" class="block z-[99999] py-2.5 px-0 w-16 text-sm 2xl:text-base font-medium text-gray-500 bg-transparent border-0 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+            <option value="English" selected ="">EN</option>
+            <option value="Čeština">Čeština</option>
+          </select>
+          <i class="fa-regular fa-angle-down"></i>
+        </div>
+        <div class=" w-fit gap-2 items-center flex">
+          <a href="./login.html"
+            class=" text-[#FFCE31] z-[101] bg-[#F9F9F9] items-center text-sm 2xl:text-base flex gap-2 py-2 px-5 rounded-full  font-medium">
+            Login Signup
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+      <div class="flex relative justify-center items-center">
+        <input type="text"
+          class="border-0 mt-6 xl:mt-10 w-8/12 z-[19] focus:ring-[yellow] focus:none-[#CB5E99] focus:none  h-11 pl-8 px-4 placeholder:text-xs text-xs rounded-full"
+        placeholder="Search with  IATA code or locations" name="" id="">
+        <button
+          class="absolute text-[#FFCE31] p-3 right-[18%] xl:right-[19%] xl:top-[46%] 2xl:right-[19%] 2xl:top-[46%] top-[34%] "><i
+            class="fa-regular text-sm fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+
+    <div class="flex z-[1] mt-[-50px] lg:mt-[-100px] xl:mt-[-160px] w-full justify-between">
+      <div class="w-2/12 lg:w-1/12 xl:w-2/12 flex justify-center items-center none">
+        <img class="w-24" src="./assets/logo 4.png" alt="">
+      </div>
+
+      <div class=" w-3/12   lg:w-1/12 xl:w-2/12 flex justify-center items-center ">
+        <button class="nav-2-open  p-4  flex justify-center items-center  ">
+          <i class="fa-sharp   text-[#FFCE31] text-2xl md:text-3xl xl:text-4xl fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <nav
+  class=" h-screen nav-2 z-[999] overflow-auto fixed right-0 top-0 w-[320px] xl:w-[400px] 2xl:w-[450px] bg-[#151F38]">
+  <div class="flex relative mt-[4rem]  justify-end"><button class="nav-2-btn"><i
+        class="fa-solid mr-4 text-5xl  text-[#CB5E99] fa-circle-xmark"></i></button></div>
+  <div class="pl-10 ">
+ <a href="./index.html">
+  <h3 class="text-3xl xl:text-4xl 2xl:text-5xl hover:text-[#CB5E99] mt-[2rem] xl:mt-[3rem] none-all font-thin text-white">Home</h3></a>
+ <a href="./about-us.html">
+  <h3 class="text-3xl xl:text-4xl 2xl:text-5xl hover:text-[#CB5E99] mt-[2rem] xl:mt-[3rem] none-all font-thin text-white">About us</h3></a> 
+  <h3 class="text-3xl xl:text-4xl 2xl:text-5xl hover:text-[#CB5E99] mt-[2rem] xl:mt-[3rem] none-all font-thin text-white">Services</h3>
+  <h3 class="text-3xl xl:text-4xl 2xl:text-5xl hover:text-[#CB5E99] mt-[2rem] xl:mt-[3rem] none-all font-thin text-white">Blog</h3>
+  <h3 class="text-3xl xl:text-4xl 2xl:text-5xl hover:text-[#CB5E99] mt-[2rem] xl:mt-[3rem] none-all font-thin text-white">Contact</h3>
+    <div class="flex pb-10 flex-col">
+      <button class="bg-white w-fit hover:text-white hover:bg-[#CB5E99] none-all text-[#CB5E99] px-2 xl:px-4 py-2 xl:py-3 text-base 2xl:text-2xl mt-[2rem] xl:mt-[4rem]">Become a vendor</button>
+      <button class="bg-[#CB5E99] hover:bg-white w-fit hover:text-[#CB5E99] text-[white] px-4 xl:px-6 py-2 xl:py-3 text-base xl:ext-lg 2xl:text-2xl mt-[2rem] xl:mt-[4rem]">Become a seller</button>
+    </div>
+  </div>
+</nav>
+
+  <section  class="mt-[200px]">
+    <div class="container  relative  h-full bg-transparent 2xl:max-w-screen-2xl mx-auto px-4 ">
+      <hr class="w-full h-[5px] bg-[#FFCE31] text-[#FFCE31]">
+      <div class="w-full md:flex grid-cols-2 grid sm:grid-cols-3 md:justify-around">
+        <div class="flex justify-center items-center flex-col">
+          <hr style="transform-origin: bottom;" class="h-[5px] bg-[#FFCE31] rotate-90 mt-[25px] w-[60px] text-[black]">
+          <input id="default-radio-1" name="default-radio-1"
+            class="mt-8 ml-1  checked:bg-yellow-400 checked:ring-0" type="radio">
+        <label style="box-shadow: 0px 4px 5px 0px #0000004D;
+        " for="default-radio-1" class="bg-[#ffffffcb] px-4 py-3 cursor-pointer rounded-lg">Latest blog </label>
+        </div>
+        <div class="flex   justify-center items-center flex-col">
+          <hr style="transform-origin: bottom;" class="h-[5px] bg-[#FFCE31] rotate-90 mt-[25px] w-[60px] text-[black]">
+          <input id="default-radio-2" name="default-radio-1"
+            class="mt-8 ml-1 checked:bg-yellow-400 checked:ring-0 " type="radio">
+            <label style="box-shadow: 0px 4px 5px 0px #0000004D;
+            " for="default-radio-2" class="bg-[#ffffffcb] px-10 py-3 cursor-pointer  rounded-lg">Food</label>
+        </div>
+        <div class="flex  justify-center items-center flex-col">
+          <hr style="transform-origin: bottom;" class="h-[5px] bg-[#FFCE31] rotate-90 mt-[25px] w-[60px] text-[black]">
+          <input id="default-radio-3" name="default-radio-1"
+            class="mt-8 ml-1 checked:bg-yellow-400 checked:ring-0 " type="radio">
+            <label style="box-shadow: 0px 4px 5px 0px #0000004D;
+            " for="default-radio-3" class="bg-[#ffffffcb] px-9 py-3 cursor-pointer  rounded-lg">Sports </label>
+
+        </div>
+        <div class="flex   justify-center items-center flex-col">
+          <hr style="transform-origin: bottom;" class="h-[5px] bg-[#FFCE31] rotate-90 mt-[25px] w-[60px] text-[black]">
+          <input id="default-radio-4" name="default-radio-1"
+            class="mt-8 ml-1 checked:bg-yellow-400 checked:ring-0 " type="radio">
+            <label style="box-shadow: 0px 4px 5px 0px #0000004D;
+            " for="default-radio-4" class="bg-[#ffffffcb] px-6 py-3  cursor-pointer rounded-lg">Shopping </label>
+        </div>
+        <div class="flex   justify-center items-center flex-col">
+          <hr style="transform-origin: bottom;" class="h-[5px] bg-[#FFCE31] rotate-90 mt-[25px] w-[60px] text-[black]">
+          <input id="default-radio-5" name="default-radio-1"
+            class="mt-8 ml-1 checked:bg-yellow-400 checked:ring-0 " type="radio">
+            <label style="box-shadow: 0px 4px 5px 0px #0000004D;
+            " for="default-radio-5" class="bg-[#ffffffcb] px-10 py-3 cursor-pointer  rounded-lg">Spa</label>
+
+        </div>
+        <div class="flex   justify-center items-center flex-col">
+          <hr style="transform-origin: bottom;" class="h-[5px] bg-[#FFCE31] rotate-90 mt-[25px] w-[60px] text-[black]">
+          <input id="default-radio-6" name="default-radio-1"
+            class="mt-8 ml-1 checked:bg-yellow-400 checked:ring-0 " type="radio">
+     <label style="box-shadow: 0px 4px 5px 0px #0000004D;
+     " for="default-radio-6" class="bg-[#ffffffcb] px-9 py-3 cursor-pointer  rounded-lg">Events</label>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="my-10">
+    <div class="container overflow-x-hidden h-full bg-transparent 2xl:max-w-screen-2xl mx-auto  px-4 ">
+      <div class="flex  py-[20px]">
+        <div class="overflow-hidden w-full">
+          <h6 style="font-family: 'Water Brush', cursive;" class="text-[#FFCE31] text-6xl uppercase font-[]">Events</h6>
+          <h6 class="text-6xl  font-semibold mt-[-40px] uppercase pb-5">Happening</h6>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="overflow-x-hidden py-[50px] mt-10 borde">
+    <div class="container overflowx-hidden  relative h-full bg-transparent 2xl:max-w-screen-2xl mx-auto px-4 ">
+      <div class="grid gap-[30px]  xl:gap-[20px] md:gap-[60px] lg:gap-y-[80px] 2xl:gap-[40px] sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-5">
+        <div class="swiper-slide before:bg-[#FFCE31] swiper-slide-1">
+          <div class="relative">
+            <img src="./assets/todo-near-me.png" class=" w-full rounded-full" alt="">
+            <div
+              class="bg-white top-3 rounded-md right-0 sm:right-[-10%] xl:right-[-10%] w-6/12 sm:w-10/12  p-2 gap-2 absolute flex flex-col rounded-b-lg">
+              <p class="text-xs">Lorem ipsum dolor sit amet.
+                Sed fugit officiis ratione.</p>
+              <div class="flex  text-xs justify-between">
+                <h4 class="text-[#FFCE31]">SPA</h4>
+                <h4 class="text-[#12121251]">20 mins ago</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide before:bg-[#FFCE31] md:mt-[-50px] swiper-slide-2">
+          <div class="relative">
+            <img src="./assets/todo-near-me.png" class=" w-full rounded-full" alt="">
+            <div
+              class="bg-white top-3 rounded-md right-0 sm:right-[-10%] xl:right-[-10%] w-6/12 sm:w-10/12  p-2 gap-2 absolute flex flex-col rounded-b-lg">
+              <p class="text-xs">Lorem ipsum dolor sit amet.
+                Sed fugit officiis ratione.</p>
+              <div class="flex  text-xs justify-between">
+                <h4 class="text-[#FFCE31]">SPA</h4>
+                <h4 class="text-[#12121251]">20 mins ago</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide before:bg-[#FFCE31]  swiper-slide-1">
+          <div class="relative">
+            <img src="./assets/todo-near-me.png"  class=" w-full rounded-full" alt="">
+            <div
+              class="bg-white top-3 rounded-md right-0 sm:right-[-10%] xl:right-[-10%] w-6/12 sm:w-10/12  p-2 gap-2 absolute flex flex-col rounded-b-lg">
+              <p class="text-xs">Lorem ipsum dolor sit amet.
+                Sed fugit officiis ratione.</p>
+              <div class="flex  text-xs justify-between">
+                <h4 class="text-[#FFCE31]">SPA</h4>
+                <h4 class="text-[#12121251]">20 mins ago</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide before:bg-[#FFCE31]  md:mt-[-50px] swiper-slide-2">
+          <div class="relative">
+            <img src="./assets/todo-near-me.png"  class=" w-full rounded-full" alt="">
+            <div
+              class="bg-white top-3 rounded-md right-0 sm:right-[-10%] xl:right-[-10%] w-6/12 sm:w-10/12  p-2 gap-2 absolute flex flex-col rounded-b-lg">
+              <p class="text-xs">Lorem ipsum dolor sit amet.
+                Sed fugit officiis ratione.</p>
+              <div class="flex  text-xs justify-between">
+                <h4 class="text-[#FFCE31]">SPA</h4>
+                <h4 class="text-[#12121251]">20 mins ago</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide  before:bg-[#FFCE31] swiper-slide-1">
+          <div class="relative">
+            <img src="./assets/todo-near-me.png"  class=" w-full rounded-full" alt="">
+            <div
+              class="bg-white top-3 rounded-md right-0 sm:right-[-10%] xl:right-[-10%] w-6/12 sm:w-10/12  p-2 gap-2 absolute flex flex-col rounded-b-lg">
+              <p class="text-xs">Lorem ipsum dolor sit amet.
+                Sed fugit officiis ratione.</p>
+              <div class="flex  text-xs justify-between">
+                <h4 class="text-[#FFCE31]">SPA</h4>
+                <h4 class="text-[#12121251]">20 mins ago</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <img src="./assets/Group 5423.png" class="pt-24" alt=""> -->
+
+  <section class="py-10" style="background: rgba(255, 255, 255, 0.42);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+  ">
+    <div class="swiper guides-mySwiper">
+      <div class="swiper-wrapper ">
+        <div class="swiper-slide">
+          <div class=" swiper-slide-3 before:bg-[#FFCE31]">
+            <div class="relative flex">
+              <img src="./assets/todo-near-me.png" class="w-full sm:w-8/12 rounded-full" alt="">
+              <div
+                class="bg-white bottom-3 rounded-md right-0 sm:static absolute sm:right-[-10%] sm:ml-[-100px] h-fit xl:right-[-30%] w-[100%]   p-2 gap-2  flex flex-col rounded-b-lg">
+                <p class="text-xs">TWIN LAKE HOTEL STATION</p>
+                <p class="text-[10px]">Get in touch before or during your stay -
+                  we're always here when you need us
+                </p>
+                <h4 class="text-gray-500 text-start text-[10px]">15 Blogs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class=" swiper-slide-3 before:bg-[#FFCE31]">
+            <div class="relative flex">
+              <img src="./assets/todo-near-me.png" class="w-full sm:w-8/12 rounded-full" alt="">
+              <div
+                class="bg-white bottom-3 rounded-md right-0 sm:static absolute sm:right-[-10%] sm:ml-[-100px] h-fit xl:right-[-30%] w-[100%]   p-2 gap-2  flex flex-col rounded-b-lg">
+                <p class="text-xs">TWIN LAKE HOTEL STATION</p>
+                <p class="text-[10px]">Get in touch before or during your stay -
+                  we're always here when you need us
+                </p>
+                <h4 class="text-gray-500 text-start text-[10px]">15 Blogs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class=" swiper-slide-3 before:bg-[#FFCE31]">
+            <div class="relative flex">
+              <img src="./assets/todo-near-me.png" class="w-full sm:w-8/12 rounded-full" alt="">
+              <div
+                class="bg-white bottom-3 rounded-md right-0 sm:static absolute sm:right-[-10%] sm:ml-[-100px] h-fit xl:right-[-30%] w-[100%]   p-2 gap-2  flex flex-col rounded-b-lg">
+                <p class="text-xs">TWIN LAKE HOTEL STATION</p>
+                <p class="text-[10px]">Get in touch before or during your stay -
+                  we're always here when you need us
+                </p>
+                <h4 class="text-gray-500 text-start text-[10px]">15 Blogs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class=" swiper-slide-3 before:bg-[#FFCE31]">
+            <div class="relative flex">
+              <img src="./assets/todo-near-me.png" class="w-full sm:w-8/12 rounded-full" alt="">
+              <div
+                class="bg-white bottom-3 rounded-md right-0 sm:static absolute sm:right-[-10%] sm:ml-[-100px] h-fit xl:right-[-30%] w-[100%]   p-2 gap-2  flex flex-col rounded-b-lg">
+                <p class="text-xs">TWIN LAKE HOTEL STATION</p>
+                <p class="text-[10px]">Get in touch before or during your stay -
+                  we're always here when you need us
+                </p>
+                <h4 class="text-gray-500 text-start text-[10px]">15 Blogs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class=" swiper-slide-3 before:bg-[#FFCE31]">
+            <div class="relative flex">
+              <img src="./assets/todo-near-me.png" class="w-full sm:w-8/12 rounded-full" alt="">
+              <div
+                class="bg-white bottom-3 rounded-md right-0 sm:static absolute sm:right-[-10%] sm:ml-[-100px] h-fit xl:right-[-30%] w-[100%]   p-2 gap-2  flex flex-col rounded-b-lg">
+                <p class="text-xs">TWIN LAKE HOTEL STATION</p>
+                <p class="text-[10px]">Get in touch before or during your stay -
+                  we're always here when you need us
+                </p>
+                <h4 class="text-gray-500 text-start text-[10px]">15 Blogs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class=" swiper-slide-3 before:bg-[#FFCE31]">
+            <div class="relative flex">
+              <img src="./assets/todo-near-me.png" class="w-full sm:w-8/12 rounded-full" alt="">
+              <div
+                class="bg-white bottom-3 rounded-md right-0 sm:static absolute sm:right-[-10%] sm:ml-[-100px] h-fit xl:right-[-30%] w-[100%]   p-2 gap-2  flex flex-col rounded-b-lg">
+                <p class="text-xs">TWIN LAKE HOTEL STATION</p>
+                <p class="text-[10px]">Get in touch before or during your stay -
+                  we're always here when you need us
+                </p>
+                <h4 class="text-gray-500 text-start text-[10px]">15 Blogs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class=" swiper-slide-3 before:bg-[#FFCE31]">
+            <div class="relative flex">
+              <img src="./assets/todo-near-me.png" class="w-full sm:w-8/12 rounded-full" alt="">
+              <div
+                class="bg-white bottom-3 rounded-md right-0 sm:static absolute sm:right-[-10%] sm:ml-[-100px] h-fit xl:right-[-30%] w-[100%]   p-2 gap-2  flex flex-col rounded-b-lg">
+                <p class="text-xs">TWIN LAKE HOTEL STATION</p>
+                <p class="text-[10px]">Get in touch before or during your stay -
+                  we're always here when you need us
+                </p>
+                <h4 class="text-gray-500 text-start text-[10px]">15 Blogs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class=" swiper-slide-3 before:bg-[#FFCE31]">
+            <div class="relative flex">
+              <img src="./assets/todo-near-me.png" class="w-full sm:w-8/12 rounded-full" alt="">
+              <div
+                class="bg-white bottom-3 rounded-md right-0 sm:static absolute sm:right-[-10%] sm:ml-[-100px] h-fit xl:right-[-30%] w-[100%]   p-2 gap-2  flex flex-col rounded-b-lg">
+                <p class="text-xs">TWIN LAKE HOTEL STATION</p>
+                <p class="text-[10px]">Get in touch before or during your stay -
+                  we're always here when you need us
+                </p>
+                <h4 class="text-gray-500 text-start text-[10px]">15 Blogs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class=" swiper-slide-3 before:bg-[#FFCE31]">
+            <div class="relative flex">
+              <img src="./assets/todo-near-me.png" class="w-full sm:w-8/12 rounded-full" alt="">
+              <div
+                class="bg-white bottom-3 rounded-md right-0 sm:static absolute sm:right-[-10%] sm:ml-[-100px] h-fit xl:right-[-30%] w-[100%]   p-2 gap-2  flex flex-col rounded-b-lg">
+                <p class="text-xs">TWIN LAKE HOTEL STATION</p>
+                <p class="text-[10px]">Get in touch before or during your stay -
+                  we're always here when you need us
+                </p>
+                <h4 class="text-gray-500 text-start text-[10px]">15 Blogs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>
+</section>
+<img src="./assets/Group 5423.png" class="pt-24" alt="">
+<script src="../src/js/app.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./src/main.js"></script>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</body>
+
+</html>

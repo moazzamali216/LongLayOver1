@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <style>
+        .globe-1 {
+            /* display: none; */
+            animation-name: glbe;
+            animation-duration: 15s;
+            /* border: 1px solid red; */
+            none: all ease;
+            /* z-index: -1; */
+            /* rotate: 180%; */
+            animation-timing-function: linear;
+            /* animation-delay: no-delay; */
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes globe {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        * {
+            font-family: poppins;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .swiper-slide {
+            background-image: url(./assets/Rectangle\ 11.png);
+            height: 450px;
+            width: 300px;
+            border-radius: 20px;
+            z-index: -1;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #slider-2-card-2,
+        #slider-2-card-1,
+        #slider-2-card-3 {
+            width: 100%;
+            /* height: auto; */
+            background: white;
+            filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.15));
+            /* box-shadow: 0px 100px 600px 0px #262D7614; */
+        }
+
+        .img-box-1 {
+            background: url('./assets/Rectangle\ 9-2.png');
+            background-size: 100% 100%;
+            background-position: center;
+            width: 100%;
+            height: 360px;
+            border-radius: 20px 20px 0px 0px !important;
+
+            color: #444444;
+
+        }
+
+        .img-box-2 {
+            background: url('./assets/Rectangle\ 9.png');
+            background-size: 100% 100%;
+            background-position: center;
+            width: 100%;
+            height: 360px;
+            border-radius: 20px 20px 0px 0px !important;
+
+            color: #444444;
+
+        }
+
+        .img-box-3 {
+            background: url('./assets/Rectangle\ 9-2.png');
+            background-size: 100% 100%;
+            background-position: center;
+            width: 100%;
+            height: 360px;
+            border-radius: 0px 0px 0px 0px !important;
+            color: #444444;
+            /* background-color: white; */
+        }
+
+        .text-1 {
+            /* border: 1px solid red */
+            height: 60px;
+            /* display: none !important; */
+        }
+
+        .grid-last-1 {
+            box-shadow: 0px 20px 70px 0px #38476D17;
+
+        }
+
+        .checking {
+            width: 100%;
+            border: 1px solid red;
+            height: 300px;
+            background-clip: url("./assets/video.mp4");
+
+            background: url('./assets/video.mp4');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .myvideo {
+            height: 100%;
+            width: 100vw;
+            border: 1px solid blue;
+        }
+
+        .myvideo2 {
+            width: 100vw;
+            height: 100%;
+        }
+
+        .bg-video-wrap {
+            position: relative;
+            overflow: hidden;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center; 
+            align-items:center;
+            height: 100%;
+            /* border: 1px solid red; */
+            /* background: url(https://designsupply-web.com/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover; */
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(45deg, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, .7) 50%);
+            background-size: 3px 3px;
+            z-index: 2;
+        }
+        .end-layer{
+            background: #FE91794D;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+        }
+        .last-cont{
+            overflow: hidden;
+        }
+        
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <section class="section-1 mt-5 w-full h-auto grid md:grid-cols-2 ">
+        <div class="s-1-item-1 m-auto h-auto relative">
+            <img class="w-[80%] m-auto globe-1 " src="./assets/globe.png" alt="">
+        </div>
+        <div class="s-1-item-2 h-auto">
+            <h1 class="font[poppins] text-[2.6rem] font-medium mt-[4.5rem]">Lorem, ipsum.</h1>
+            <p class="text-[grey] mt-10 font-light leading-[2.9rem] text-xl ">Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim
+                ad minim veniam,
+            </p>
+        </div>
+
+    </section>
+    <section class="section-1 mt-5 w-full h-auto grid md:grid-cols-2 ">
+        <div class="s-1-item-2 order-2 md:order-none h-auto ">
+            <h1 class="font[poppins] text-[2.6rem] font-medium ">Lorem, ipsum.</h1>
+            <p class="text-[grey]   font-light leading-[2.9rem] ml- text-xl  ">Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim
+                ad minim veniam,
+            </p>
+        </div>
+        <div class="s-1-item-1 order-1 h-auto md:order-none relative ">
+            <img class="w-full" src="./assets/section 2 image 1.png" alt="">
+        </div>
+
+    </section>
+    <section class="flex-col w-full mt-[10rem] flex">
+        <div class="header-1 justify-center text-[2.25rem] text-center items-center flex">
+            <p class="  font-semibold text-[#4091B2]">WHY</p>
+            <p class="  ml-2" style="white-space:nowrap">Choose us</p>
+        </div>
+        <div class="flex font-light w-full justify-center">
+            <p
+                class="mt-[1.15rem] leading-[180%] w-full  md:w-9/12 text-justify md:text-center text-[1.5rem] header-det">
+                Lorem Ipsum is
+                simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                dummy text ever since the 1500s.</p>
+        </div>
+    </section>
+    <section
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[2.8rem] gap-x-[2.8rem] rounded-[10px]  ml-[3.125rem] mr-[3.125rem] mt-[6.8rem]">
+        <div style="box-shadow: 0px 10px 60px 0px #262D7614;
+" class="grid-item-1 pb-[3.6rem] rounded-[20px]  flex flex-col items-center">
+            <div
+                class="bg-[#4091B2] text-[#2A6190]  w-auto h-auto sm:pl-[6%] pr-[6%] pl-[6%]  sm:pr-[6%] md:pl-[7%] md:pr-[7%] p-[5%] rounded-[100%] mt-[-2rem] top-logo">
+                <i class="fa-regular fa-location-dot text-[3rem]"></i>
+            </div>
+            <div class="text text-[#4091B2]  mt-[3.8rem] text-[1.875rem]">Lorem, ipsum.</div>
+            <div class="text-2 text-center text-[1.25rem] font-light ml-[1.75rem] mr-[1.75rem]  mt-[3.31rem]">Lorem
+                ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</div>
+        </div>
+        <div style="box-shadow: 0px 10px 60px 0px #262D7614;
+" class="grid-item-1 rounded-[20px] pb-[3.6rem] flex flex-col items-center ">
+            <div class="bg-[#F0C53E;] text-[#2A6190]  w-auto h-auto  p-[5%] rounded-[100%] mt-[-2rem] top-logo">
+                <i class="text-[3rem] fa-solid fa-earth-americas"></i>
+            </div>
+            <div class="text text-[#4091B2] mt-[3.8rem] text-[1.875rem]">Lorem, ipsum.</div>
+            <div class="text-2 text-center text-[1.25rem] font-light ml-[1.75rem] mr-[1.75rem] mt-[3.31rem]">Lorem ipsum
+                dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</div>
+        </div>
+        <div style="box-shadow: 0px 10px 60px 0px #262D7614;
+" class="grid-item-1 rounded-[20px] pb-[3.6rem] flex flex-col items-center">
+            <div
+                class="bg-[#77F7F0] text-[#2A6190] w-auto h-auto pl-[5%] pr-[5%] p-[5%] rounded-[100%] mt-[-2rem] top-logo">
+                <i class="fa-light text-[3rem] fa-circle-dollar"></i>
+            </div>
+            <div class="text text-[#4091B2] mt-[3.8rem] text-[1.875rem]">Lorem, ipsum.</div>
+            <div class="text-2 text-center text-[1.25rem] font-light ml-[1.75rem] mr-[1.75rem]  mt-[3.31rem]">Lorem
+                ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</div>
+        </div>
+    </section>
+    <section>
+        <h1 class="mt-[5rem] text-[2rem] ml-[4rem]">Popular Destination</h1>
+        <div class="bg-none mt-[1.9rem] swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div id="slider-img-1" class="swiper-slide relative">
+                    <h2 class="absolute z-50 bottom-[1.4rem] text-white text-[1.8rem] left-[1.2rem]">Turkey</h2>
+                    <div class="bg-[black] rounded-[20px] h-full w-full opacity-25"></div>
+                </div>
+                <div id="slider-img-3" class="swiper-slide relative">
+                    <h2 class="absolute z-50 bottom-[1.4rem] text-white text-[1.8rem] left-[1.2rem]">Turkey</h2>
+                    <div class="bg-[black] rounded-[20px] h-full w-full opacity-25"></div>
+                </div>
+                <div id="slider-img-2" class="swiper-slide relative">
+                    <h2 class="absolute z-50 bottom-[1.4rem] text-white text-[1.8rem] left-[1.2rem]">Turkey</h2>
+                    <div class="bg-[black] rounded-[20px] h-full w-full opacity-25"></div>
+                </div>
+                <div id="slider-img-4" class="swiper-slide relative">
+                    <h2 class="absolute z-50 bottom-[1.4rem] text-white text-[1.8rem] left-[1.2rem]">Turkey</h2>
+                    <div class="bg-[black] rounded-[20px] h-full w-full opacity-25"></div>
+                </div>
+                <div id="slider-img-5" class="swiper-slide relative">
+                    <h2 class="absolute z-50 bottom-[1.4rem] text-white text-[1.8rem] left-[1.2rem]">Turkey</h2>
+                    <div class="bg-[black] rounded-[20px] h-full w-full opacity-25"></div>
+                </div>
+                <div id="slider-img-6" class="swiper-slide relative">
+                    <h2 class="absolute z-50 bottom-[1.4rem] text-white text-[1.8rem] left-[1.2rem]">Turkey</h2>
+                    <div class="bg-[black] rounded-[20px] h-full w-full opacity-25"></div>
+                </div>
+                <div id="slider-img-7" class="swiper-slide relative">
+                    <h2 class="absolute z-50 bottom-[1.4rem] text-white text-[1.8rem] left-[1.2rem]">Turkey</h2>
+                    <div class="bg-[black] rounded-[20px] h-full w-full opacity-25"></div>
+                </div>
+                <div id="slider-img-8" class="swiper-slide relative">
+                    <h2 class="absolute z-50 bottom-[1.4rem] text-white text-[1.8rem] left-[1.2rem]">Turkey</h2>
+                    <div class="bg-[black] rounded-[20px] h-full w-full opacity-25"></div>
+                </div>
+                <div id="slider-img-9" class="swiper-slide relative">
+                    <h2 class="absolute z-50 bottom-[1.4rem] text-white text-[1.8rem] left-[1.2rem]">Turkey</h2>
+                    <div class="bg-[black] rounded-[20px] h-full w-full opacity-25"></div>
+                </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </section>
+    <section class="p-[4.2rem] bg-[#59C6D41A]">
+        <h1 class="mt-[5rem] text-[2rem] ml-[4rem]">Featured Content</h1>
+        <div class="swiper2 mt-[1rem] mySwiper2">
+            <div class="swiper-wrapper">
+                <div id="slider-2-card-1" class="w-full pb-4 h-full swiper-slide rounded-[20px]">
+                    <div class="img-box-1  "></div>
+                    <div
+                        class="text-1  flex justify-center items-center text-center lg:w-[60%] mt-[1.18rem] text-[1.25rem] text-[#444444;] m-auto">
+                        <p> The City of Vigan </p>
+                    </div>
+                </div>
+                <div id="slider-2-card-2" class="swiper-slide">
+                    <div class="img-box-2 "></div>
+                    <div
+                        class="text-1 flex justify-center items-center text-center lg:w-[60%] mt-[1.18rem] text-[1.25rem] text-[#444444;] m-auto">
+                        Coron Island A living destination</div>
+                </div>
+                <div id="slider-2-card-3" class="swiper-slide">
+                    <div class="img-box-3 ]"></div>
+                    <div
+                        class="text-1  flex justify-center items-center text-center lg:w-[60%] mt-[1.18rem] text-[1.25rem] text-[#444444;] m-auto">
+                        The Island of Sibu</div>
+                </div>
+                <div id="slider-2-card-2" class="swiper-slide">
+                    <div class="img-box-2 "></div>
+                    <div
+                        class="text-1 flex justify-center items-center text-center lg:w-[60%] mt-[1.18rem] text-[1.25rem] text-[#444444;] m-auto">
+                        Coron Island A living destination</div>
+                </div>
+                <div id="slider-2-card-1" class="w-full pb-4 h-full swiper-slide rounded-[20px]">
+                    <div class="img-box-1  ]"></div>
+                    <div
+                        class="text-1  flex justify-center items-center text-center lg:w-[60%] mt-[1.18rem] text-[1.25rem] text-[#444444;] m-auto">
+                        <p> The City of Vigan </p>
+                    </div>
+                </div>
+                <div id="slider-2-card-3" class="swiper-slide">
+                    <div class="img-box-3"></div>
+                    <div
+                        class="text-1  flex justify-center items-center text-center lg:w-[60%] mt-[1.18rem] text-[1.25rem] text-[#444444;] m-auto">
+                        The Island of Sibu</div>
+                </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </section>
+
+    <div class="">
+        <h1 class="mt-[1.75rem] text-[2rem] ml-[2rem] lg:ml-[4rem]">Latest Submissions</h1>
+        <div class="mt-[1.7rem] grid md:gap-x-[2.25rem] lg:gap-x-[7.25rem] grid-cols-1 gap-y-[3rem] md:grid-cols-2">
+            <div
+                class="grid-last-1 p-[1rem] sm:p-[1.87rem] sm:pt-[1.7rem] sm:pb-[1.9rem] rounded-[20px] m-10 md:m-0 w-auto md:ml-[2rem] lg:ml-[6.68rem]">
+                <h1 class="text-[1.2rem]">Lorem ipsum.</h1>
+                <div class="flex mt-[0.45rem] h-auto justify-between items-center">
+                    <p class="font-light text-[0.688rem] text-[grey]">Lorem ipsum dolor sit amet consectetur.</p>
+                    <div><img class="w-full" src="./assets/Dropdown.png" alt=""></div>
+                </div>
+                <div class="flex  mt-[1.5rem] justify-between">
+                    <div class="flex justify-between">
+                        <div><img class="w-full rounded-[20px]" src="./assets/product10 1.png" alt=""></div>
+                        <div class="flex flex-col ml-3  sm:ml-5 justify-around">
+                            <h1 class="text-[1rem] font-base">Lorem, ipsum.</h1>
+                            <h2 class="text-[0.7rem]">Lorem, ipsum dolor.</h2>
+                            <h3 class="text-[0.7rem]">Uploaded by :<span class=" ml-[2px] text-[#4091B2]">2days
+                                    ago</span></h3>
+                        </div>
+                    </div>
+                    <div><i class="text-[1.5rem] fa-sharp text-[#4091B2]  fa-solid fa-share"></i></div>
+                </div>
+                <div class="flex  mt-[1.5rem] justify-between">
+                    <div class="flex justify-between">
+                        <div><img class="w-full rounded-[20px]" src="./assets/product17 1.png" alt=""></div>
+                        <div class="flex flex-col ml-3  sm:ml-5 justify-around">
+                            <h1 class="text-[1rem] font-base">Lorem, ipsum.</h1>
+                            <h2 class="text-[0.7rem]">Lorem, ipsum dolor.</h2>
+                            <h3 class="text-[0.7rem]">Uploaded by :<span class=" ml-[2px] text-[#4091B2]">2days
+                                    ago</span></h3>
+                        </div>
+                    </div>
+                    <div><i class="text-[1.5rem] fa-sharp text-[#4091B2]  fa-solid fa-share"></i></div>
+                </div>
+                <div class="flex  mt-[1.5rem] justify-between">
+                    <div class="flex justify-between">
+                        <div><img class="w-full rounded-[20px]" src="./assets/product9 1.png" alt=""></div>
+                        <div class="flex flex-col ml-3  sm:ml-5 justify-around">
+                            <h1 class="text-[1rem] font-base">Lorem, ipsum.</h1>
+                            <h2 class="text-[0.7rem]">Lorem, ipsum dolor.</h2>
+                            <h3 class="text-[0.7rem]">Uploaded by :<span class=" ml-[2px] text-[#4091B2]">2days
+                                    ago</span></h3>
+                        </div>
+                    </div>
+                    <div><i class="text-[1.5rem] fa-sharp text-[#4091B2]  fa-solid fa-share"></i></div>
+                </div>
+                <div class="flex mt-[1.5rem] justify-between">
+                    <div class="flex justify-between">
+                        <div><img class="w-full rounded-[20px]" src="./assets/product1 10.png" alt=""></div>
+                        <div class="flex flex-col ml-3  sm:ml-5 justify-around">
+                            <h1 class="text-[1rem] font-base">Lorem, ipsum.</h1>
+                            <h2 class="text-[0.7rem]">Lorem, ipsum dolor.</h2>
+                            <h3 class="text-[0.7rem]">Uploaded by :<span class=" ml-[2px] text-[#4091B2]">2days
+                                    ago</span></h3>
+                        </div>
+                    </div>
+                    <div><i class="text-[1.5rem] text-[#4091B2] fa-sharp fa-solid fa-share"></i></div>
+                </div>
+            </div>
+
+            <div
+                class="grid-last-1 p-[1rem] sm:p-[1.87rem] sm:pt-[1.7rem] sm:pb-[1.9rem] rounded-[20px] w-auto m-10 md:m-0  md:mr-[2rem] lg:mr-[6.68rem] ">
+                <h1 class="text-[1.2rem]">Lorem ipsum.</h1>
+                <div class="flex mt-[0.45rem] h-auto justify-between items-center">
+                    <p class="font-light text-[0.688rem] text-[grey]">Lorem ipsum dolor sit amet consectetur.</p>
+                    <div><img class="w-full" src="./assets/Dropdown.png" alt=""></div>
+                </div>
+                <div class="flex  mt-[1.5rem] justify-between">
+                    <div class="flex justify-between">
+                        <div><img class="w-full rounded-[20px]" src="./assets/product10 1.png" alt=""></div>
+                        <div class="flex flex-col ml-3  sm:ml-5 justify-around">
+                            <h1 class="text-[1rem] font-base">Lorem, ipsum.</h1>
+                            <h2 class="text-[0.7rem]">Lorem, ipsum dolor.</h2>
+                            <h3 class="text-[0.7rem]">Uploaded by :<span class=" ml-[2px] text-[#4091B2]">2days
+                                    ago</span></h3>
+                        </div>
+                    </div>
+                    <div><i class="text-[1.5rem] fa-sharp text-[#4091B2]  fa-solid fa-share"></i></div>
+                </div>
+                <div class="flex  mt-[1.5rem] justify-between">
+                    <div class="flex justify-between">
+                        <div><img class="w-full rounded-[20px]" src="./assets/product17 1.png" alt=""></div>
+                        <div class="flex flex-col ml-3  sm:ml-5 justify-around">
+                            <h1 class="text-[1rem] font-base">Lorem, ipsum.</h1>
+                            <h2 class="text-[0.7rem]">Lorem, ipsum dolor.</h2>
+                            <h3 class="text-[0.7rem]">Uploaded by :<span class=" ml-[2px] text-[#4091B2]">2days
+                                    ago</span></h3>
+                        </div>
+                    </div>
+                    <div><i class="text-[1.5rem] fa-sharp text-[#4091B2]  fa-solid fa-share"></i></div>
+                </div>
+                <div class="flex  mt-[1.5rem] justify-between">
+                    <div class="flex justify-between">
+                        <div><img class="w-full rounded-[20px]" src="./assets/product9 1.png" alt=""></div>
+                        <div class="flex flex-col ml-3  sm:ml-5 justify-around">
+                            <h1 class="text-[1rem] font-base">Lorem, ipsum.</h1>
+                            <h2 class="text-[0.7rem]">Lorem, ipsum dolor.</h2>
+                            <h3 class="text-[0.7rem]">Uploaded by :<span class=" ml-[2px] text-[#4091B2]">2days
+                                    ago</span></h3>
+                        </div>
+                    </div>
+                    <div><i class="text-[1.5rem] fa-sharp text-[#4091B2]  fa-solid fa-share"></i></div>
+                </div>
+                <div class="flex mt-[1.5rem] justify-between">
+                    <div class="flex justify-between">
+                        <div><img class="w-full rounded-[20px]" src="./assets/product1 10.png" alt=""></div>
+                        <div class="flex flex-col ml-3 sm:ml-5 justify-around">
+                            <h1 class="text-[1rem] font-base">Lorem, ipsum.</h1>
+                            <h2 class="text-[0.7rem]">Lorem, ipsum dolor.</h2>
+                            <h3 class="text-[0.7rem]">Uploaded by :<span class=" ml-[2px] text-[#4091B2]">2days
+                                    ago</span></h3>
+                        </div>
+                    </div>
+                    <div><i class="text-[1.5rem] text-[#4091B2] fa-sharp fa-solid fa-share"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="md:mt-10 flex justify-center items-center bg-video-wrap">
+            <div class="layer-end"></div>
+            <h1 class="absolute z-[800] text-white ] text-[2.5rem] md:text-[3.4rem] mt-[-110px] font-semibold">Lorem, ipsum.</h1>
+            <p class="absolute z-[800] md:text-[1.25rem] text-center mt-[80px] sm:mt-[140px] sm:w-10/12  text-white text-center  md:w-10/12">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, cum! ipsum det,Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, nisi. moles</p>
+
+            <video src="./assets/video.mp4" loop muted autoplay>
+            </video>
+            <!-- <div class="overlay"> -->
+        </div>
+
+
+    <div class="mt-[10rem]">che</div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3.5,
+            spaceBetween: 20,
+            centeredSlides: true,
+            loop: true,
+            autoplay: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+    </script>
+    <script>
+        var swiper2 = new Swiper(".mySwiper2", {
+            slidesPerView: 3.5,
+            spaceBetween: 20,
+            autoplay: true,
+            // slidesPerView:true,
+            centeredSlides: true,
+            loop: true,
+            pagination: {
+
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>
